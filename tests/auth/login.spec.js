@@ -14,10 +14,9 @@ test.describe('User Login / Logout', () => {
 
     // Navigate to Login Page
     await managerPage.getMenuPage().navigateTo(testData.menuNames.login);
-    
 
     // Login using saved credentials
-    await managerPage.getLoginPage().login(registeredUser.email, registeredUser.password);
+    await managerPage.getLoginPage().login(registeredUser.email, process.env.TEST_USER_PASSWORD);
 
     // Assertion: Verify LoggedIn text is visible
     await expect(managerPage.getLoginPage().loggedInAsText).toBeVisible();

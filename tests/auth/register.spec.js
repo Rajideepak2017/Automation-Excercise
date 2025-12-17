@@ -5,6 +5,7 @@ const fs = require('fs');
 const ManagerPage = require('../../pages/manager.page');
 const { writeJSONFile } = require('../../utils/helper');
 
+
 test.describe('User Registration', () => {
 
   testData.users.forEach((user) => {
@@ -12,7 +13,6 @@ test.describe('User Registration', () => {
      
       // Generate unique email
       const email = `${user.emailPrefix}_${Date.now()}@test.com`;
-
      
       // Open login page
       await managerPage.getBasePage().openHomePage();
@@ -20,14 +20,14 @@ test.describe('User Registration', () => {
 
       // Navigate to Signup Page
       await managerPage.getMenuPage().navigateTo(testData.menuNames.login);
-     
 
       // Start signup
       await managerPage.getRegisterPage().startSignup(user.name, email);
 
       // Fill account details using individual parameters
+      const password = process.env.TEST_USER_PASSWORD;
       await managerPage.getRegisterPage().fillAccountDetails(
-        user.password,
+        password,
         user.firstName,
         user.lastName,
         user.address,
@@ -41,7 +41,8 @@ test.describe('User Registration', () => {
       await expect(managerPage.getRegisterPage().accountCreatedText).toBeVisible();
       await expect(page).toHaveURL(/account_created/);
 
-      const registeredUser = {email: email,password: user.password};
+      // Storing the Registered user
+      const registeredUser = {email: email};
       writeJSONFile('./utils/registeredUser.json', registeredUser);
     });
   });

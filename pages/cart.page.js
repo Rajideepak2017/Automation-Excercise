@@ -1,7 +1,6 @@
 class CartPage {
   constructor(page) {
     this.page = page;
-
     this.cartTable = page.locator('#cart_info_table');
     this.cartItems = page.locator('td.cart_product');
     this.cartProductNames = page.locator('.cart_description h4 a');

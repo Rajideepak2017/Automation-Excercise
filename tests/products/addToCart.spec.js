@@ -5,7 +5,6 @@ const testData =require('../../utils/testData.json');
 test.describe('Add to Cart & View Cart', () => {
 
   test('Verify cart has items and selected product is displayed', async ({ managerPage,page }) => {
-
     
     // Open login page
     await managerPage.getBasePage().openHomePage();

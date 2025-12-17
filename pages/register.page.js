@@ -1,7 +1,6 @@
 class RegisterPage {
   constructor(page) {
     this.page = page;
-
     this.signupName = page.locator('input[data-qa="signup-name"]');
     this.signupEmail = page.locator('input[data-qa="signup-email"]');
     this.signupButton = page.locator('button[data-qa="signup-button"]');

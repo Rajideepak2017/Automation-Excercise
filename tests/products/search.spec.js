@@ -6,7 +6,6 @@ test.describe('Product Search', () => {
 
   testData.products.forEach((product) => {
     test(`Search for product: ${product.name}`, async ({ managerPage, page }) => {
-
       
       // Open Home page
       await managerPage.getBasePage().openHomePage();

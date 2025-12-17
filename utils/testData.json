@@ -3,7 +3,6 @@
     {
       "name": "TestUser1",
       "emailPrefix": "user1",
-      "password": "Password123",
       "firstName": "Test",
       "lastName": "UserOne",
       "address": "123 Test Street",

@@ -8,18 +8,16 @@ class BasePage {
     try {
       if (await this.consent.isVisible({ timeout: 3000 })) {
         await this.consent.click();
-        console.log("Consent accepted");
+        console.log('Consent accepted');
       }
     } catch (error) {
-      console.log("Consent button not present or already accepted");
+      console.log('Consent button not present or already accepted');
     }
   }
 
-  async openHomePage(){
-        await this.page.goto('/');
+  async openHomePage() {
+    await this.page.goto('/');
+  }
 }
-}
-
-
 
 module.exports = { BasePage };

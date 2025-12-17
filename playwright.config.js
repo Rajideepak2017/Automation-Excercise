@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, './secure.env'), debug: true });
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
