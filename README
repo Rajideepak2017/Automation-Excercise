@@ -65,4 +65,5 @@ View test report: npx playwright show-report
 
 ### Security Note
 Password is managed using environment variables (`.env`) and are not committed to the repository. 
+Example `.env` file format : TEST_USER_PASSWORD=your_password
 
