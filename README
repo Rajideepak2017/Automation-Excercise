@@ -1,0 +1,64 @@
+AutomationExercise Regression Testing Project
+
+This project automates key user journeys on AutomationExercise
+ using Playwright with JavaScript. The goal is to ensure the website main features work correctly and reliably across browsers.
+
+User Journeys Covered:
+
+The tests focus on four important actions that most users perform:
+
+User Registration -  Ensures new users can create accounts.
+
+User Login / Logout - Confirms login and logout functionality.
+
+Product Search - Verifies users can search for products and view results.
+
+Add to Cart & View Cart - Checks that products can be added to the cart and displayed correctly.
+
+These journeys cover core site functionality and critical business flows.
+
+Framework & Language :
+
+Framework: Playwright
+
+Language: JavaScript
+
+
+Project Structure
+automationexercise-playwright-js
+├── playwright.config.js
+├── package.json
+├── pages
+│   ├── base.page.js
+│   ├── register.page.js
+│   ├── login.page.js
+│   ├── products.page.js
+│   └── cart.page.js
+├── tests
+│   ├── auth
+│   │   ├── register.spec.js
+│   │   └── login.spec.js
+│   └── products
+│       ├── search.spec.js
+│       └── addToCart.spec.js
+├── fixtures
+│   └── fixture.js
+├── utils
+│   ├── testData.json
+│   └── registeredUser.json
+└── README.md
+
+
+pages/ : Page Object Model classes for different pages.
+
+tests/ : Test scripts organized by user journey.
+
+fixtures/ : Playwright fixtures for shared page objects.
+
+utils/ : JSON test data and stored registered user credentials.
+
+Setup & Running Tests:
+Install dependencies: npm install
+Run all tests: npx playwright test
+Run a specific test file: npx playwright test tests/auth/register.spec.js
+View test report: npx playwright show-report

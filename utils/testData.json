@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "name": "TestUser1",
+      "emailPrefix": "user1",
+      "password": "Password123",
+      "firstName": "Test",
+      "lastName": "UserOne",
+      "address": "123 Test Street",
+      "state": "London",
+      "city": "London",
+      "zipcode": "12345",
+      "mobile": "1234567890"
+    }],
+  "products": [
+    {
+      "name": "Dress"
+    }
+  ],
+  "menuNames": {
+    "products": "Products",
+    "login": "Signup / Login",
+    "cart": "Cart"
+  }
+}
