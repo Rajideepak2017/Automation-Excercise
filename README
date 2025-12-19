@@ -63,7 +63,15 @@ Run all tests: npx playwright test
 Run a specific test file: npx playwright test tests/auth/register.spec.js
 View test report: npx playwright show-report
 
+### Test Reports
+Playwright generates HTML reports and test result files locally.  
+These files are ignored via `.gitignore` and are not committed to the repository.
+
+Reports can be generated and viewed locally using: npx playwright show-report
+
 ### Security Note
 Password is managed using environment variables (`.env`) and are not committed to the repository. 
 Example `.env` file format : TEST_USER_PASSWORD=your_password
+
+
 
