@@ -64,10 +64,12 @@ Run a specific test file: npx playwright test tests/auth/register.spec.js
 View test report: npx playwright show-report
 
 ### Test Reports
-Playwright generates HTML reports and test result files locally.  
+Playwright generates HTML reports in the `playwright-report` folder.
 These files are ignored via `.gitignore` and are not committed to the repository.
 
-Reports can be generated and viewed locally using: npx playwright show-report
+Reports can be viewed locally using:
+npx playwright show-report
+
 
 ### Security Note
 Password is managed using environment variables (`.env`) and are not committed to the repository. 
